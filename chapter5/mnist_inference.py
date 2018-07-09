@@ -33,5 +33,5 @@ def inference(input_tensor, regularizer):
         weights = get_weight_variable([LAYER1_NODE, OUTPUT_NODE], regularizer)
         biases = tf.get_variable('biases', [OUTPUT_NODE],
                              initializer=tf.constant_initializer(0.0))
-        layer2 = tf.nn.relu(tf.matmul(layer1, weights)+biases)
+        layer2 = tf.matmul(layer1, weights)+biases
     return layer2

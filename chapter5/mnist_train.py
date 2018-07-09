@@ -65,7 +65,7 @@ def train(mnist):
                 saver.save(sess, os.path.join(MODEL_SAVE_PATH, MODEL_NAME),
                            global_step=global_step)
 
-def main(argv=None):
+def main(argv=None): # argv不能少，否则会报错
     mnist = input_data.read_data_sets('../data/MNIST_data', one_hot=True)
     train(mnist)
 
